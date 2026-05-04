@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción con TensorFlow.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Agregar referencia al script principal -->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1> Predicción con TensorFlow.js</h1>
+
+        <div class="glass-card">
+            <div class="card-title"> Entrenamiento del Modelo</div>
+            <button class="btn" id="btnEntrenar" onclick="entrenarModelo()">
+                Entrenar Modelo
+            </button>
+            <div id="statusEntrenamiento"></div>
+        </div>
+
+        <div class="glass-card">
+            <div class="card-title">📈 Gráfica de Pérdida durante el Entrenamiento</div>
+            <div class="chart-container">
+                <canvas id="lossChart"></canvas>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="card-title"> Predicción</div>
+            <div class="input-group">
+                <input type="text" id="inputValores" placeholder="Ej: 10, 20, 25" value="10, 20, 25">
+                <button class="btn" onclick="predecir()">Predecir</button>
+            </div>
+            <div id="statusPrediccion"></div>
+            <div id="resultados" class="results"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
